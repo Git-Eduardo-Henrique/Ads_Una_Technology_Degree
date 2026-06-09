@@ -1,4 +1,5 @@
 from adversario import grupo2
+from random import randint
 
 def checar_casa(tabuleiro, id_casa): # retorna posições marcadas do id escolhido
     posicoes = []
@@ -21,29 +22,37 @@ def grupo1(tabuleiro, meu_id):
     adv = checar_casa(tabuleiro, adv_id) # marcadas pelo adversários
 
     print("=-=" * 30)
-    print(disp_0)
+    print(f"disponível (0): {disp_0}")
     print("=-=" * 30)
-    print(marcadas)
+    print(f"marcadas (1): {marcadas}")
     print("=-=" * 30)
-    print(adv)
-    print("=-=" * 30)
+    print(f"marcadas pelo adversario(2): {adv}")
     print("=-=" * 30)
 
+    # caso tabuleiro esteja vazia, irá escolher aleatoriamente uma casa do meio
+    if not marcadas and not adv:
+        return [randint(2, 3),randint(2, 3)]
+    
     return tabuleiro
 
-tabuleiro = [[1,0,0,0,0,0],
-            [0,0,0,1,0,0],
+tabuleiro = [[0,0,0,0,0,0],
             [0,0,0,0,0,0],
-            [0,0,0,2,2,0],
             [0,0,0,0,0,0],
-            [0,0,1,0,0,0]]
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0]]
 
 id_1 = 1
 id_2 = 2
 
-
 print(grupo1(tabuleiro, id_1))
-print("=-=" * 30)
+
+# tabuleiro = [[1,0,0,0,0,2],
+#             [0,0,0,1,0,0],
+#             [0,0,0,0,0,0],
+#             [1,0,0,2,2,0],
+#             [0,0,0,0,0,0],
+#             [0,0,1,0,0,0]]
 
 # tabuleiro = grupo2(tabuleiro, id_2)
 # print(tabuleiro)
