@@ -1,19 +1,31 @@
-programa
-{
-	
-	funcao inicio()
-	{
-		escreva("Olá Mundo")
-	}
+programa {
+  funcao inicio() {
+    inteiro nums[10], cont
+
+    escreva("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+
+    para (cont = 0; cont < 10; cont++){
+      escreva("Digite o ", cont+1, "° numero: ")
+      leia(nums[cont])
+    }
+
+    escreva("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+
+    para (cont = 0; cont < 10; cont++){
+      escreva(cont+1, "° valor do vetor: ", nums[cont], "\n")
+    }
+
+    escreva("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+
+    para (cont = 9; cont >= 0; cont--){
+      escreva(cont+1, "° valor do vetor: ", nums[cont], "\n")
+    }
+
+    escreva("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+  }
+  /*
+  Leia dez números inteiros e armazene-os em um vetor. 
+  Apresente os valores na ordem de entrada e, depois, na 
+  ordem inversa.
+  */
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 12; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
